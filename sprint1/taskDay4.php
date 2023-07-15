@@ -1,6 +1,5 @@
 <?php
 
-
 echo "############### CASHIER ###############\n";
 echo "masukkan nama konsumen : ";
 $nameKonsumen = trim(fgets(STDIN));
@@ -29,6 +28,5 @@ if ($ap >= 30000){
   } else {
     echo "terimakasih sudah berkunjung\n"
   }
-
 
 ?>
