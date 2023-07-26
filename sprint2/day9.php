@@ -48,7 +48,7 @@ balik:
 // function parameter
 
 // function argument
-function notif($nama){// parameter
+function notif($nama){ // parameter : variable yang bisa kita gunakan di function
     echo "$nama telah terdaftar\n";
 }
 
@@ -59,5 +59,8 @@ function sum (int $a, int $b){
     echo "$a + $b = $t\n";
     echo $a + $b = $t\n";
 }
+
+// memberikan default value di awal / tengah parameter menjadi kurang berguna 
+// memberikan default value di parameter terakhir
 
 ?>
