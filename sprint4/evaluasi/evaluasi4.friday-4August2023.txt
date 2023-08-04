@@ -1,0 +1,20 @@
+
+
+1. database adalah kumpulan data yang terstruktur
+   macam-macam database
+   - relational database
+   - end-user database
+   - operational database
+
+2. database relational adalah database yang berdiri sendiri atau tidak berkaitan langsung dengan project yang sedang dikerjakan
+
+3. SQL adalah Structured Query Language
+   query :
+   - DDL -> Data Definition Language
+        yang berhubungan dengan definisi di struktur database
+   - DML -> Data Manipulation Language
+        berkaitan dengan manipulasi data yang ada di database
+   - DCL -> Data Control Language
+        berkaitan dengan pemberian hak akses terhadap data yang ada didalam database
+
+4. 
