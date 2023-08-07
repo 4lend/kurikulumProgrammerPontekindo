@@ -7,7 +7,7 @@ database = folder
 
 
 3. apa lupa
-- DBL
+- DDL
     data definition language -> perintah sequel berhubungan dengan pendefinitian struktur database
 - DML
     data manupulation language -> berhubungan menipulasi atau pengolahan data
