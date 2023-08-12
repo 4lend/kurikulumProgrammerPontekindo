@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "5fe2b0fad688719e",
+    "type": "split",
+    "children": [
+      {
+        "id": "27dda1e02075a80a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d5de0e2ba27c07f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "evaluasi5/evaluasi5.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "af651790c8b4c8ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "8a2c122c702197dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8915870589a62b1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8103f36bdc804e26",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7eab5dc65d5d415a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8f3bb2c27c5781d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "cc9c702d86a68af0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "234640ccc971a4e1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "evaluasi5/evaluasi5.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3f682a6b8145d9ff",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "evaluasi5/evaluasi5.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c89555c1eb2bc16f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "46343dc96a9ee015",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "evaluasi5/evaluasi5.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4d5de0e2ba27c07f",
+  "lastOpenFiles": [
+    "evaluasi5/MyMedSos.sql",
+    "evaluasi5/4913",
+    "evaluasi5/evaluasi5.md~"
+  ]
+}

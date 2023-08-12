@@ -39,7 +39,7 @@ function keyGanjil($data) {
 
 $data = [24, 79, 32, 65, 82, 15];
 $hasil = keyGanjil($data);
-print_r($result);
+print_r($hasil);
 
 
 // 2.
