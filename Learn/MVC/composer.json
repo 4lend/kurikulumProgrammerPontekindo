@@ -1,0 +1,16 @@
+{
+    "name": "alfurqani/mvc",
+    "description": "practice autoload php composer",
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "Controller/"
+        }
+    },
+    "authors": [
+        {
+            "name": "4lend",
+            "email": "syifa.alfurqoni@gmail.com"
+        }
+    ],
+    "require": {}
+}
