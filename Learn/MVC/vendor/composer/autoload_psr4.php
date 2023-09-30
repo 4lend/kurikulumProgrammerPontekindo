@@ -6,5 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Controller\\' => array($baseDir . '/Controller'),
+    'ProgrammerZamanNow\\' => array($baseDir . '/src'),
+    'ClassModel\\' => array($baseDir . '/Controller'),
+    'ClassController\\' => array($baseDir . '/Controller'),
 );

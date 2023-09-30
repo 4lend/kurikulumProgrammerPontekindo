@@ -1,0 +1,19 @@
+name: Push to GitLab
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Push to GitLab
+        run: |
+          git remote add gitlab git@github.com:4lend/kurikulumProgrammerPontekindo.git
+          git push gitlab main

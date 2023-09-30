@@ -3,7 +3,9 @@
     "description": "practice autoload php composer",
     "autoload": {
         "psr-4": {
-            "Controller\\": "Controller/"
+            "ProgrammerZamanNow\\" : "src/",
+            "ClassController\\" : "Controller/",
+            "ClassModel\\" : "Controller/"
         }
     },
     "authors": [

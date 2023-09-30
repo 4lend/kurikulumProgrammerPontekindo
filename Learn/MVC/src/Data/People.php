@@ -1,7 +1,9 @@
-<?php
-namespace Controller;
+<?php 
 
-class ControllerA {
+namespace ProgrammerZamanNow\Data;
+
+class People {
+
     public $message;
     public $pesan;
 
@@ -11,7 +13,7 @@ class ControllerA {
         // $this->message = $message;
         // $this->pesan = $pesan;
     }
-
+// melankolis
     public function showMessage() {
         echo "<br>";
         echo $this->message;
@@ -19,9 +21,14 @@ class ControllerA {
         echo "<br>";
         echo $this->pesan;
     }
-}
 
-$ControllerA = new ControllerA();
-$ControllerA->showMessage();
+    // public function __construct(private string $name) {
+    // }
+// 
+    // public function sayHello(string $name){
+        // echo "Hello $name, My name is $this-name";
+    // }
+
+}
 
 ?>
