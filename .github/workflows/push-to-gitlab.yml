@@ -15,5 +15,5 @@ jobs:
 
       - name: Push to GitLab
         run: |
-          git remote add gitlab git@github.com:4lend/kurikulumProgrammerPontekindo.git
-          git push gitlab main
+          git remote add gitlab git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git
+          git push gitlab HEAD:main
