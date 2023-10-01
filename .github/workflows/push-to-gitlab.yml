@@ -11,7 +11,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v2
-     - uses: yesolutions/mirror-action@v1
+     - uses: yesolutions/mirror-action@v0.5.1
        env:
          # REMOTE: 'ssh://git@gitlab.com/<your-gitlab-username>/<your-gitlab-repo-name>.git'
          REMOTE: 'git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git'
