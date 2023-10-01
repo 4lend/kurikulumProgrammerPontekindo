@@ -3,16 +3,17 @@ name: Gitlab Sync
 on: [push, pull_request, create, delete]
 
 jobs:
- sync:
-   name: Gitlab Sync
-   runs-on: ubuntu-latest
-   steps:
-   - uses: actions/checkout@v2
-     with:
-       fetch-depth: 0
+  sync:
+    name: Gitlab Sync
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - uses: action-pack/gitlab-sync@v3
-     with:
-       url: git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git
-       token: glpat-yic7sMX6MHj8Gbxfc646
-       ssh_private_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAeUDp6yhR1JHkz9RvjVw3ECh3NtPViYQHb0I+KDD0Y5 syifa.alfurqoni@gmail.com
-       known_hosts: gitlab.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAfuCHKVTjquxvt6CM6tdG4SLp1Btn/nOeHHE5UOzRdf
+      with:
+        username: github.4lend
+        url: git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git
+        token: glpat-yic7sMX6MHj8Gbxfc646
+        ssh_private_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAeUDp6yhR1JHkz9RvjVw3ECh3NtPViYQHb0I+KDD0Y5 syifa.alfurqoni@gmail.com
+        known_hosts: gitlab.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAfuCHKVTjquxvt6CM6tdG4SLp1Btn/nOeHHE5UOzRdf
