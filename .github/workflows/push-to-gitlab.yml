@@ -3,24 +3,27 @@ name: Push to GitLab
 on:
   push:
     branches:
-      - main
+      - main  # Ganti dengan nama branch utama Anda
 
 jobs:
   push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout Code
+      uses: actions/checkout@v2
 
-      - name: Debug
+    - name: Push to GitLab
       run: |
-        echo "CEK FUNGSI GITHUB ACTIONS"
-        echo "URL repositori GitLab:git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git"
-        echo "Kunci SSH: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAeUDp6yhR1JHkz9RvjVw3ECh3NtPViYQHb0I+KDD0Y5 syifa.alfurqoni@gmail.com
-"
-
-      - name: Push to GitLab
-        run: |
-          git remote add gitlab git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git
-          git push gitlab HEAD:main
+        # Mengaktifkan agent SSH
+        eval "$(ssh-agent -s)"
+        ssh-add <(echo "$SSH_PRIVATE_KEY")  # SSH_PRIVATE_KEY adalah secret yang harus Anda tambahkan di pengaturan repository
+        
+        # Menambahkan host GitLab ke known_hosts
+        mkdir -p ~/.ssh
+        ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+        
+        # Melakukan push ke GitLab
+        git remote add gitlab git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git
+        # git remote add gitlab git@gitlab.com:<USERNAME>/<REPO>.git  # Ganti dengan URL repo GitLab Anda
+        git push gitlab HEAD:main
