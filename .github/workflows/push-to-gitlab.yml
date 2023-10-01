@@ -1,32 +1,20 @@
-name: Push to GitLab
+name: Mirror to GitLab Repo
 
-on:
-  push:
-    branches:
-      - main  # Ganti dengan nama branch utama Anda
+on: [ push, delete, create ]
+
+# Ensures that only one mirror task will run at a time.
+concurrency:
+ group: git-mirror
 
 jobs:
-  push:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
-
-    - name: Push to GitLab
-      run: |
-        # Mengaktifkan agent SSH
-        eval "$(ssh-agent -s)"
-        ssh-add <(echo "/home/alfurqani/.ssh/id_ed25519.pub")  # SSH_PRIVATE_KEY adalah secret yang harus Anda tambahkan di pengaturan repository
-        # ssh-add <(echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAeUDp6yhR1JHkz9RvjVw3ECh3NtPViYQHb0I+KDD0Y5 syifa.alfurqoni@gmail.com")  # SSH_PRIVATE_KEY adalah secret yang harus Anda tambahkan di pengaturan repository
-        # ssh-add <(echo "$SSH_PRIVATE_KEY")  # SSH_PRIVATE_KEY adalah secret yang harus Anda tambahkan di pengaturan repository
-        # ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAeUDp6yhR1JHkz9RvjVw3ECh3NtPViYQHb0I+KDD0Y5 syifa.alfurqoni@gmail.com
-        
-        # Menambahkan host GitLab ke known_hosts
-        mkdir -p ~/.ssh
-        ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-        
-        # Melakukan push ke GitLab
-        git remote add gitlab git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git
-        # git remote add gitlab git@gitlab.com:<USERNAME>/<REPO>.git  # Ganti dengan URL repo GitLab Anda
-        git push gitlab HEAD:main
+ git-mirror:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v2
+     - uses: yesolutions/mirror-action@v1
+       env:
+         # REMOTE: 'ssh://git@gitlab.com/<your-gitlab-username>/<your-gitlab-repo-name>.git'
+         REMOTE: 'git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git'
+         GIT_SSH_PRIVATE_KEY: ${{ secrets.GIT_SSH_PRIVATE_KEY_ED25519 }}
+         GIT_SSH_KNOWN_HOSTS: ${{ secrets.GIT_SSH_KNOWN_HOSTS }}
+         DEBUG: "true"
