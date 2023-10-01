@@ -13,7 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Debug
+      run: |
+        echo "CEK FUNGSI GITHUB ACTIONS"
+        echo "URL repositori GitLab:git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git"
+        echo "Kunci SSH: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAeUDp6yhR1JHkz9RvjVw3ECh3NtPViYQHb0I+KDD0Y5 syifa.alfurqoni@gmail.com
+"
+
       - name: Push to GitLab
         run: |
           git remote add gitlab git@gitlab.com:4lend/kurikulumProgrammerPontekindo.git
-          git push ssh HEAD:main
+          git push gitlab HEAD:main
