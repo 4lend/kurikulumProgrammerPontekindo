@@ -7,9 +7,11 @@ jobs:
     name: Gitlab Sync
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
+        ssh-key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAeUDp6yhR1JHkz9RvjVw3ECh3NtPViYQHb0I+KDD0Y5 syifa.alfurqoni@gmail.com
+        ssh-known-hosts: $HOME/.ssh/known_hosts
     - uses: action-pack/gitlab-sync@v3
       with:
         username: github.4lend
@@ -17,3 +19,10 @@ jobs:
         token: glpat-yic7sMX6MHj8Gbxfc646
         ssh_private_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAeUDp6yhR1JHkz9RvjVw3ECh3NtPViYQHb0I+KDD0Y5 syifa.alfurqoni@gmail.com
         known_hosts: gitlab.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAfuCHKVTjquxvt6CM6tdG4SLp1Btn/nOeHHE5UOzRdf
+
+        username: ${{ github.actor }}
+        url: https://gitlab.com/${{ github.repository }}.git
+        # url: ${{ secrets.GITLAB_URL }}
+        # username: ${{ secrets.GITLAB_USERNAME }}
+        # Personal access token from gitlab.com 
+        token: ${{ secrets.GITLAB_TOKEN }}
