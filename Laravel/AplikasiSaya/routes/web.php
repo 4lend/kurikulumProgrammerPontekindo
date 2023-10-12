@@ -1,7 +1,13 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+=======
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\ProfileController;
+>>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -40,4 +46,10 @@ Route::get('/dashboard', function () {
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
+<<<<<<< HEAD
 // require __DIR__.'/auth.php';
+=======
+// require __DIR__.'/auth.php';
+
+Route::get('/barang', [BarangController::class, 'index']);
+>>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))

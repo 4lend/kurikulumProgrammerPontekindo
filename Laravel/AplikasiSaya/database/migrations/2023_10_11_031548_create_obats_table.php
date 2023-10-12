@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('obats', function (Blueprint $table) {
+<<<<<<< HEAD
             $table->id();
+=======
+            $table->id('obat_id');
+            $table->double('dasar');
+>>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))
             $table->timestamps();
         });
     }

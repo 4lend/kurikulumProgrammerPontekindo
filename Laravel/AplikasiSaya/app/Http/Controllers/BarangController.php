@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+=======
+use App\Models\Barang;
+// use App\Http\Controllers\BarangController
+>>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))
 
 class BarangController extends Controller
 {
@@ -11,7 +16,13 @@ class BarangController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         //
+=======
+        $barang = Barang::all();
+        return view('barang', ['barang' => $barang]);
+        // return view('barang', compact['barang']);
+>>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))
     }
 
     /**
@@ -27,7 +38,21 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         //
+=======
+        // Barang::create(
+        //     [
+        //         "nama_barang" => 'rotiboy',
+        //         "letak_barang" => 'kantin',
+        //         "harga" => 3000,
+        //         "jumlah_barang" => 12,
+        //         "tgl_pengadaan" => '12-02-2023',
+        //         "status" => 'ada',
+        //     ]
+        // );
+        // return redirect('/barang');
+>>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))
     }
 
     /**

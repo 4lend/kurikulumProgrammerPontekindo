@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 php artisan make:model departemen -mcr
 php artisan make:model detail -mcr
 php artisan make:model detail_obat -mcr
@@ -21,3 +22,28 @@ php artisan make:model role -mcr
 php artisan make:model shift -mcr
 php artisan make:model soap -mcr
 php artisan make:model users -mcr
+=======
+php artisan make:model Departemen -mcr
+php artisan make:model Detail -mcr
+php artisan make:model Detail_obat -mcr
+php artisan make:model Detail_tambahan -mcr
+php artisan make:model Dokter -mcr
+php artisan make:model Failed_jobs -mcr
+php artisan make:model Jadwal -mcr
+php artisan make:model Kamar -mcr
+php artisan make:model Migrations -mcr
+php artisan make:model Pasien -mcr
+php artisan make:model Password_resets -mcr
+php artisan make:model Pegawai -mcr
+php artisan make:model Perawatan -mcr
+php artisan make:model Perbaikan -mcr
+php artisan make:model Permission -mcr
+php artisan make:model Permission_role -mcr
+php artisan make:model Poliklinik -mcr
+php artisan make:model Presensi -mcr
+php artisan make:model Regristasi -mcr
+php artisan make:model Role -mcr
+php artisan make:model Shift -mcr
+php artisan make:model Soap -mcr
+php artisan make:model Users -mcr
+>>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))
