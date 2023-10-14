@@ -1,0 +1,172 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: lightgray;
+}
+
+.sidebar {
+    /* background-color: #111827;  */
+    background-color: white; 
+    border-right: 0.5px solid;
+    border-color: gray;
+    width: 400px;
+    /* padding-top: 25px; */
+    padding: 24px;
+    /* display: flex-; */
+    box-sizing: border-box;
+}
+
+.main {
+    /* background-color: yellow; */
+    flex-grow: 1;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    padding-top: 5px;
+    /* padding-bottom: 10px; */
+    border-top: 10px;
+}
+
+/* .main:hover { */
+    /* background: orange; */
+    /* transition: all ease-in .2s; */
+/* } */
+
+.sidebar .description-header {
+    font-style: normal;
+    font-weight: normal;
+    /* font-weight: 700; */
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    /* color: #FFFFFF; */
+    /* display: flexbox; */
+    /* align-items: center; */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    /* align-items: center; */
+}
+
+.sidebar .icon {
+    width: 25px;
+    margin-right: 12px;
+    /* color: red; */
+} 
+
+.sidebar .header .list-item {
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* padding: 12px 10px; */
+    /* border-radius: 8px; */
+    /* background-color: aqua; */
+    /* height: 40px; */
+    /* box-sizing: border-box; */
+}
+
+.sidebar .main .list-item {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    padding: 12px 10px;
+    width: 212px;
+    box-sizing: border-box;
+    /* border-radius: 50px; */
+    /* margin-top: 12px; */
+    /* margin-bottom: 12px; */
+}
+
+.sidebar .main .list-item:hover {
+    background: orange;
+    transition: all ease-in .2s;
+}
+
+.sidebar .main .coll .btn:hover {
+    background: orange;
+    transition: all ease-in .2s;
+}
+
+.sidebar .main .coll .coll .ul .coll-list:hover {
+    background: orange;
+    transition: all ease-in .2s;
+}
+
+.sidebar .main .coll .btn{
+    font-weight: bold;
+    padding: 0;
+}
+
+.sidebar .main .coll {
+    /* mb-1 bg-warning; */
+    /* margin-top: 1; */
+    /* margin-bottom: 1; */
+    /* background: lightgreen; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    padding: 12px 10px;
+    width: 212px;
+    box-sizing: border-box;
+}
+
+.sidebar .main .coll .ul {
+    background-color: lightblue;
+}
+
+.sidebar .main .coll-list {
+    /* margin-top: 5px; */
+    /* margin: 6px 10px 6px; */
+    padding: 6px 12px 6px;
+    /* background-color: lightblue; */
+}
+
+.sidebar .main .list-item .description {
+    font-size: 16px;
+}
+
+.main-content {
+    background-color: lightsalmon;
+    /* display: flex; */
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+
+
+/* main content */
+/* .container .main-content { */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: aqua; */
+/* } */
+.main-content .menu-option-1 a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.main-content .menu-option-2 a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.main-content .menu-option-1 {
+    border-bottom: 4px solid lightblue;
+}
+
+.main-content .menu-option .description {
+    border-color: red;
+
+.main-content .menu-option a:hover {
+    color: lightblue;
+    border-bottom: 2px solid red;
+}

@@ -1,14 +1,8 @@
 <?php
 
-<<<<<<< HEAD
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-=======
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
-use App\Http\Controllers\ProfileController;
->>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\RawatJalanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,30 +20,41 @@ Route::get('/', function () {
 });
 
 // Route::get('/hello', function () {
-    // return ('hello');
+// return ('hello');
 // });
 
 // Route::get('/dashboard', function () {
-    // return view ('dashboard');
+// return view ('dashboard');
 // })->name(Dashboard)
 
 Route::get('/dashboard', function () {
-    return view ('dashboard');
+    return view('dashboard');
 });
 
 // Route::get('/dashboard', function () {
-    // return view('dashboard');
+// return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
-    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+// Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+// Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
-<<<<<<< HEAD
-// require __DIR__.'/auth.php';
-=======
 // require __DIR__.'/auth.php';
 
-Route::get('/barang', [BarangController::class, 'index']);
->>>>>>> 3deb8fad (chore : add automation to push github and gitlab; feat : fix error laravel project after git reset --hard (not do again))
+// Route::get('/barang', [BarangController::class, 'index']);
+//
+// Route::get('/home', function () {
+    // return view('home');
+// });
+
+Route::get('/', [RawatJalanController::class, 'index']);
+
+// Route::get('/add', [RawatJalanController::class, 'create']);
+//
+//
+// Route::get('/add', [RawatJalanController::class, 'create']);
+
+// Route::get('/add', function () {
+    // return view('rawat-jalan-add');
+// });
