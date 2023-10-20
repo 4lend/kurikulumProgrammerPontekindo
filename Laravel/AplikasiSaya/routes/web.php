@@ -42,19 +42,22 @@ Route::get('/dashboard', function () {
 // });
 // require __DIR__.'/auth.php';
 
-// Route::get('/barang', [BarangController::class, 'index']);
+Route::get('/barang', [BarangController::class, 'index']);
+Route::get('/barang-add', [BarangController::class, 'create']);
+// Route::get('/barang', function() {
+    // return view ('/barang');
+// });
 //
 // Route::get('/home', function () {
     // return view('home');
 // });
 
-Route::get('/', [RawatJalanController::class, 'index']);
-
-// Route::get('/add', [RawatJalanController::class, 'create']);
-//
-//
-// Route::get('/add', [RawatJalanController::class, 'create']);
-
-// Route::get('/add', function () {
-    // return view('rawat-jalan-add');
+Route::get('/', function () {
+    return view('home');
+});
+// Route::get('/', function () {
+    // return view('welcome');
 // });
+
+// Route::get('/', [RawatJalanController::class, 'index']);
+// Route::get('/add', [RawatJalanController::class, 'create']);

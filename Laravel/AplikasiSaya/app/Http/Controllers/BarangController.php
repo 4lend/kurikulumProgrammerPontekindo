@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Barang;
 // use App\Http\Controllers\BarangController
-use App\Http\Controllers\BarangController
+use App\Http\Controllers\BarangController;
 
 class BarangController extends Controller
 {
@@ -24,7 +24,18 @@ class BarangController extends Controller
      */
     public function create()
     {
-        //
+        // Barang::create(
+            // [
+                // "nama_barang" => 'rotiboy',
+                // "letak_barang" => 'kantin',
+                // "harga" => 3000,
+                // "jumlah_barang" => 12,
+                // "tgl_pengadaan" => '2023-12-02',
+                // "status" => 'ada',
+            // ]
+        // );
+        // return redirect('/barang-add');
+        return view('/barang-add');
     }
 
     /**
@@ -32,17 +43,8 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        Barang::create(
-            [
-                "nama_barang" => 'rotiboy',
-                "letak_barang" => 'kantin',
-                "harga" => 3000,
-                "jumlah_barang" => 12,
-                "tgl_pengadaan" => '12-02-2023',
-                "status" => 'ada',
-            ]
-        );
-        return redirect('/barang');
+        // Barang::create($request->all());
+        // return redirect(/barang)
     }
 
     /**

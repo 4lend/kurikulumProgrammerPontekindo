@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\RawatJalan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RawatJalanController extends Controller
 {
@@ -14,16 +15,12 @@ class RawatJalanController extends Controller
     {
         // ## Query Builder
         // $rawatJalan = DB::table('rawat_jalans')->get();  # show data
-        // DB::table('rawat_jalans')->insert([
-            // 'user',
-            // ''
-        // ]);
-        // dd($rawatJalan);
 
         ## Eloquent
         $rawatJalan = RawatJalan::all();
         // dd($rawatJalan);
-        return view('rawat-jalan-add', compact('rawatJalan'));
+        // return view('rawat-jalan-add', compact('rawatJalan'));
+        return view('home', compact('rawatJalan'));
     }
 
     /**
@@ -31,7 +28,28 @@ class RawatJalanController extends Controller
      */
     public function create()
     {
-        //
+        ## Add data using Query Builder
+        // DB::table('rawat_jalans')->insert([
+        // 'user' => 'fedaa',
+        // 'no_bpjs' => '3434',
+        // 'poli' => 'Poli Gigi',
+        // 'dokter' => 'Dr. Vania Utami',
+        // 'waktu_konsul' => 'Selasa, 17 Oktober 2023',
+        // 'no_rekam_medis' => 'B78927',
+        // 'status' => 'Registrasi',
+        // 'antrian' => '1C',
+        // ]);
+        // dd($rawatJalan);
+        ## Add data using Eloquent
+        RawatJalan::create([
+            'user' => 'Eloquent',
+            'no_bpjs' => '3434',
+            'poli' => 'Poli Gigi',
+            'dokter' => 'Dr. Vania Utami',
+            'waktu_konsul' => 'Selasa, 17 Oktober 2023',
+            'no_rekam_medis' => 'B78927',
+            'status' => 'Registrasi'
+        ]);
     }
 
     /**
